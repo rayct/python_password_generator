@@ -33,8 +33,4 @@ b9.pack(side=LEFT, padx=5, pady=10)
 b10 = ttk.Button(root, text="Outline Button", bootstyle=(SUCCESS, OUTLINE))
 b10.pack(side=LEFT, padx=5, pady=10)
 
-
-
-
-
 root.mainloop()
