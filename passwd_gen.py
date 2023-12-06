@@ -7,6 +7,7 @@ import tkinter as tk
 from tkinter import ttk
 
 password_generated = False
+current_theme = "darkly"
 
 def generate_password():
     global password_generated
@@ -76,13 +77,21 @@ def clear_password():
     password_display.config(state=tk.DISABLED)
     password_generated = False
 
+def switch_theme():
+    global current_theme
+    if current_theme == "darkly":
+        current_theme = "flatly"
+    else:
+        current_theme = "darkly"
+    style.theme_use(current_theme)
+
 def show_about():
     messagebox.showinfo("About", "Password Generator App\nAuthor: Raymond C. Turner.\nApp Version 1.0-beta")
 
 root = tk.Tk()
 root.title("PassGen")
 
-style = Style(theme="darkly")
+style = Style(theme=current_theme)
 
 root.minsize(width=400, height=500)
 root.maxsize(width=700, height=800)
@@ -92,6 +101,9 @@ title_frame.pack(fill=tk.X)
 
 title_label = ttk.Label(title_frame, text="PassGen", font=("Helvetica", 12), foreground="white")
 title_label.pack(side=tk.LEFT, padx=10)
+
+theme_switch_button = ttk.Button(title_frame, text="Switch Theme", command=switch_theme)
+theme_switch_button.pack(side=tk.RIGHT, padx=10)
 
 about_button = ttk.Button(title_frame, text="About", command=show_about)
 about_button.pack(side=tk.RIGHT, padx=10)
