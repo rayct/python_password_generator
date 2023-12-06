@@ -17,6 +17,9 @@ env/
 *.sublime-workspace
 .DS_Store
 
+# other files
+TODO.md
+
 # Logs
 *.log
 
