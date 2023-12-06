@@ -1,11 +1,10 @@
-import tkinter as tk
-from tkinter import ttk
-import random
 import string
-from tkinter import messagebox
-from tkinter import filedialog
+import random
+from tkinter import filedialog, messagebox
 from fpdf import FPDF
 from ttkbootstrap import Style
+import tkinter as tk
+from tkinter import ttk
 
 password_generated = False
 
@@ -78,73 +77,64 @@ def clear_password():
     password_generated = False
 
 def show_about():
-    messagebox.showinfo("About", "Password Generator App\nAuthor: Raymond C. Turner.\nApp Version 1.1.0")
+    messagebox.showinfo("About", "Password Generator App\nAuthor: Raymond C. Turner.\nApp Version 1.0-beta")
 
 root = tk.Tk()
 root.title("PassGen")
 
-# Set minimum and maximum window size
-root.minsize(width=400, height=500)  # Change these values as needed
-root.maxsize(width=700, height=800)  # Change these values as needed
+style = Style(theme="darkly")
 
-# Create ttkbootstrap style
-style = Style(theme="darkly")  # Change the theme as desired
+root.minsize(width=400, height=500)
+root.maxsize(width=700, height=800)
 
-# Title bar
-title_frame = ttk.Frame(root, padding=(10, 5))  # Using ttk.Frame
+title_frame = ttk.Frame(root, padding=(10, 5))
 title_frame.pack(fill=tk.X)
 
-title_label = ttk.Label(title_frame, text="PassGen", font=("Helvecta", 12), foreground="white")  # Using ttk.Label
-title_label.pack(side=tk.LEFT)
+title_label = ttk.Label(title_frame, text="PassGen", font=("Helvetica", 12), foreground="white")
+title_label.pack(side=tk.LEFT, padx=10)
 
-about_button = ttk.Button(title_frame, text="About", command=show_about)  # Using ttk.Button
-about_button.pack(side=tk.RIGHT)
+about_button = ttk.Button(title_frame, text="About", command=show_about)
+about_button.pack(side=tk.RIGHT, padx=10)
 
-# Length selection
-length_label = ttk.Label(root, text="Password Length:")  # Using ttk.Label
-length_label.pack()
+length_label = ttk.Label(root, text="Password Length:")
+length_label.pack(pady=5)
 
-length_entry = ttk.Entry(root)  # Using ttk.Entry
-length_entry.pack()
+length_entry = ttk.Entry(root)
+length_entry.pack(pady=5)
 
-# Character complexity options
 uppercase_var = tk.IntVar()
-uppercase_check = ttk.Checkbutton(root, text="Uppercase", variable=uppercase_var)  # Using ttk.Checkbutton
-uppercase_check.pack()
+uppercase_check = ttk.Checkbutton(root, text="Uppercase", variable=uppercase_var)
+uppercase_check.pack(pady=5)
 
 lowercase_var = tk.IntVar()
-lowercase_check = ttk.Checkbutton(root, text="Lowercase", variable=lowercase_var)  # Using ttk.Checkbutton
-lowercase_check.pack()
+lowercase_check = ttk.Checkbutton(root, text="Lowercase", variable=lowercase_var)
+lowercase_check.pack(pady=5)
 
 digits_var = tk.IntVar()
-digits_check = ttk.Checkbutton(root, text="Digits", variable=digits_var)  # Using ttk.Checkbutton
-digits_check.pack()
+digits_check = ttk.Checkbutton(root, text="Digits", variable=digits_var)
+digits_check.pack(pady=5)
 
 special_chars_var = tk.IntVar()
-special_chars_check = ttk.Checkbutton(root, text="Special Characters", variable=special_chars_var)  # Using ttk.Checkbutton
-special_chars_check.pack()
+special_chars_check = ttk.Checkbutton(root, text="Special Characters", variable=special_chars_var)
+special_chars_check.pack(pady=5)
 
-# Generate button
-generate_button = ttk.Button(root, text="Generate Password", command=generate_password)  # Using ttk.Button
-generate_button.pack(pady=5)
+generate_button = ttk.Button(root, text="Generate Password", command=generate_password)
+generate_button.pack(pady=10)
 
-# Display generated password
 password_display = tk.Text(root, height=5, width=30)
 password_display.config(state=tk.DISABLED)
-password_display.pack()
+password_display.pack(pady=5)
 
-# UI Buttons for Save to File, Copy to Clipboard, Clear Password
-save_button = ttk.Button(root, text="Save to File", command=save_to_file)  # Using ttk.Button
-save_button.pack(pady=5)
+save_button = ttk.Button(root, text="Save to File", command=save_to_file)
+save_button.pack(pady=10)
 
-copy_clipboard_button = ttk.Button(root, text="Copy to Clipboard", command=copy_to_clipboard)  # Using ttk.Button
-copy_clipboard_button.pack(pady=5)
+copy_clipboard_button = ttk.Button(root, text="Copy to Clipboard", command=copy_to_clipboard)
+copy_clipboard_button.pack(pady=10)
 
-clear_button = ttk.Button(root, text="Clear Password", command=clear_password)  # Using ttk.Button
-clear_button.pack(pady=5)
+clear_button = ttk.Button(root, text="Clear Password", command=clear_password)
+clear_button.pack(pady=10)
 
-# Interface label at bottom right
-interface_label = ttk.Label(root, text="codestak.io", foreground="gray")  # Using ttk.Label
-interface_label.pack(side=tk.RIGHT, anchor=tk.SE)
+interface_label = ttk.Label(root, text="codestack.io", foreground="gray")
+interface_label.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)
 
 root.mainloop()
