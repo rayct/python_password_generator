@@ -32,3 +32,4 @@ TODO.md
 pip-wheel-metadata/
 source_files
 archive
+unittest_logs
