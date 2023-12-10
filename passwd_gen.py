@@ -149,4 +149,5 @@ clear_button.pack(pady=10)
 interface_label = ttk.Label(root, text="codestack.io", foreground="gray")
 interface_label.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)
 
+
 root.mainloop()
