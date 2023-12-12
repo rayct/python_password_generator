@@ -93,7 +93,7 @@ root.title("PassGen")
 
 style = Style(theme=current_theme)
 
-root.minsize(width=400, height=500)
+root.minsize(width=400, height=500) 
 root.maxsize(width=700, height=800)
 
 title_frame = ttk.Frame(root, padding=(10, 5))
