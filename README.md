@@ -1,4 +1,4 @@
-# Password Generator Application Version 2.0
+# Password Generator Application Version 2.0-beta
 
 ## Password Generator written in Python using custom tkinter (cttk) for modern UI.
 
