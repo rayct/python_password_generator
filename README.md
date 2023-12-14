@@ -1,6 +1,6 @@
 # Password Generator Application Version 2.0
 
-## Python Password Generator using ttkbootstrap
+## Password Generator written in Python using custom tkinter (cttk) for modern UI.
 
 This application generates random passwords based on user-defined settings.
 
@@ -74,6 +74,6 @@ For more details, contact <info@codestak.io>
 
 Documentation By: **Raymond C. TURNER**
 
-**Revision:** Tuesday 12th December 2023
+**Revision:** Thursday 14th December 2023
 
 **codestak.io**
