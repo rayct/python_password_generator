@@ -1,4 +1,4 @@
-# Password Generator Application Version 2.0-beta
+# Password Generator Application Version 0.0.1
 
 ## Password Generator written in Python using custom tkinter (CTk) for modern UI.
 
@@ -67,13 +67,11 @@ This project is licensed under the Creative Commons Legal Code.
 ## About
 This Password Generator application was created using Python and Tkinter by Raymond C. Turner. It is a simple utility to generate secure passwords easily.
 
-For more details, contact <info@codestak.io>
+For more details, contact <raycturner@proton.me.>
 
 
 ---
 
 Documentation By: **Raymond C. TURNER**
 
-**Revision:** Saturday 20th January 2024
-
-**codestak.io**
+**Revision:** November 23rd, 2024
