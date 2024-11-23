@@ -86,7 +86,7 @@ def switch_theme():
     style.theme_use(current_theme)
 
 def show_about():
-    messagebox.showinfo("About", "Password Generator App\nAuthor: Raymond C. Turner.\nVersion 2.0-beta")
+    messagebox.showinfo("About", "Password Generator App\nAuthor: Raymond C. Turner.\nVersion 0.0.1")
 
 root = tk.Tk()
 root.title("PassGen")
