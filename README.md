@@ -1,4 +1,4 @@
-# Password Generator Application Version 0.1.0
+# Password Generator Application Version 0.1.1
 
 ## Password Generator written in Python using custom tkinter (CTk) for modern UI.
 
@@ -74,4 +74,4 @@ For more details, contact <raycturner@proton.me.>
 
 Documentation By: **Raymond C. TURNER**
 
-**Revision:** November 23rd, 2024
+**Revision:** November 24th, 2024
