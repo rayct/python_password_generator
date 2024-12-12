@@ -86,7 +86,7 @@ def switch_theme():
     style.theme_use(current_theme)
 
 def show_about():
-    messagebox.showinfo("About", "Password Generator App\nAuthor: Raymond C. Turner.\nVersion 0.1.1")
+    messagebox.showinfo("About", "Password Generator App\nAuthor: Raymond C. Turner.\nVersion 0.1.2")
 
 root = tk.Tk()
 root.title("PassGen")
@@ -146,7 +146,7 @@ copy_clipboard_button.pack(pady=10)
 clear_button = ttk.Button(root, text="Clear Password", command=clear_password)
 clear_button.pack(pady=10)
 
-interface_label = ttk.Label(root, text="Version 0.1.1", foreground="gray")
+interface_label = ttk.Label(root, text="Version 0.1.2", foreground="gray")
 interface_label.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)
 
 root.mainloop()
